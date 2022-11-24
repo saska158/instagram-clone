@@ -1,0 +1,123 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+p {
+    margin: 0;
+}
+
+.app-container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 1em;
+    border-bottom: 1px solid #727573;
+}
+
+.logo {
+    width: 150px;
+}
+
+.header-img,
+.avatar-img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.avatar-img {
+    margin-right: 1em;
+}
+.avatar-info {
+    display: flex;
+    align-items: center;
+    padding: 1.5em 1em;
+}
+
+.avatar-location {
+    margin-top: .5em;
+}
+
+.post-img {
+    position: relative;
+    
+}
+
+.post-img img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.post-details {
+    padding: 1em;
+   
+}
+
+.post-details img {
+    width: 20px;
+}
+
+.post-comments {
+    padding: 0 1em;
+}
+
+.post-details i {
+    display: inline-block;
+    margin-right: .5em;
+    cursor: pointer;
+    
+}
+
+.heart-pump {
+    animation: pump .5s;
+}
+
+
+@keyframes pump {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5)}
+    100% { transform: scale(1)}
+}
+
+
+.likes {
+    margin-top: .5em;
+
+}
+
+.liked {
+    color: red;
+    
+}
+
+.white-heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: scale(5);
+    color: #fff;
+    visibility: hidden;
+  /*  transition: transform 3s;*/
+}
+
+.visible {
+  /*  visibility: visible;
+    transform: scale(6.5);*/
+    animation: appear .5s; 
+}
+ @keyframes appear {
+     0% {visibility: hidden; }
+     50% {visibility: visible; transform: scale(6)}
+     100% {visibility: hidden; transform: scale(5)}
+ }
